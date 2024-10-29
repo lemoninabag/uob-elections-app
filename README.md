@@ -18,12 +18,12 @@ sender_address = "domain@gmail.com"
 ### 2. Set app password on Google:
 Visit [this link]('https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmyaccount.google.com%2Fapppasswords&followup=https%3A%2F%2Fmyaccount.google.com%2Fapppasswords&ifkv=ASKXGp0mvda2mUS-4Iuq-oDCKDcqVEnbEjmFCNtztqKCJEOzwiC8zJQC6L1UTsauBa8d1T2HFUBu5A&osid=1&passive=1209600&rart=ANgoxcctWpClpk-e1e82lr36OXRpFS3yNTPoIQeGw7Gx1E_m8sTNMKNtUfkrYmm0REjRyYB_NygDdRaj6jyfNM_F_IDCclLfdg&service=accountsettings&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-32962069%3A1706579171935790&theme=glif') & generate an app name and password
 
-### 4. Store environment variables:
+### 3. Store environment variables:
 
 ```
 touch .env
 ```
 
-### 3. Access the app:
+### 4. Access the app:
 - Go to `http://127.0.0.1:5000/` to access the app.
 
