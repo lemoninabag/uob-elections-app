@@ -74,7 +74,7 @@ def register():
 
         with open('voters.csv', mode='a', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([username, email, hashed_pass, False, False])  # Assuming is_verified = False initially
+            writer.writerow([username, email, hashed_pass, False, False])  
             session['user'] = username
             session['email'] = email
 
