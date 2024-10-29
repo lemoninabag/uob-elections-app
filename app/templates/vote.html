@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vote for All Positions</title>
+</head>
+<body>
+
+    {% extends "base.html" %}
+    {% block content %}
+
+    <form method="POST">
+    <div style="text-align: right; padding-top: 50px;">
+        <strong>Hi, {{ student_name }}</strong>
+    </div>
+
+    <h1>Vote for All Positions</h1>
+        {% for position in positions %}
+            <h2>{{ position }}</h2>
+            {% for candidate in candidates[position] %}
+                <input type="radio" name="{{ position }}" value="{{ candidate }}" required> {{ candidate }}<br>
+            {% endfor %}
+        {% endfor %}
+        <button type="submit">Submit Votes</button>
+    </form>
+    {% endblock %}
+</body>
+</html>

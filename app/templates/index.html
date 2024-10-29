@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website | University of Bolton</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+    <link rel="stylesheet" href="static/style.css">  
+</head>
+<body>
+
+<header>
+    <h1>Welcome to the University of Bolton Voting System</h1>
+    <nav>
+        <a href="/register">Register</a>
+        <a href="/auth/login">Log In</a>
+    </nav>
+</header>
+
+<div class="banner">
+    <div class="countdown" id="countdown"></div>
+</div>
+
+<div class="info-section">
+    <img src="your-image-url.jpg" alt="University Student Council">
+    <div>
+        <h2>About University Student Councils</h2>
+        <p>University student councils are the voice of the student body, representing student interests and organizing events to enhance the university experience.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 University of Bolton. All rights reserved.</p>
+</footer>
+
+<script>
+    // Countdown Timer
+    const countdownDate = new Date("November 12, 2024 00:00:00").getTime();
+    
+    const countdownFunction = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("countdown").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        
+        if (distance < 0) {
+            clearInterval(countdownFunction);
+            document.getElementById("countdown").innerHTML = "Voting has started!";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>

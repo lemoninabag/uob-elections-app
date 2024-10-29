@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email</title>
+</head>
+<body>
+    <h2>Verify Your Email</h2>
+
+    <p>A recovery code has been sent to {{ masked_email }}.</p>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Recovery Code Form -->
+    <form method="post" action="{{ url_for('auth.verify_email') }}">
+        <label for="recovery_code">Enter Recovery Code:</label>
+        <input type="text" name="recovery_code" required>
+        <button type="submit">Verify Code</button>
+    </form>
+
+    <!-- Resend Code Button -->
+    <form method="post" action="{{ url_for('auth.resend_pass_code') }}">
+        <button type="submit">Resend Code</button>
+    </form>
+
+</body>
+</html>

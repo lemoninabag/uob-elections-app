@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify email</title>
+    
+</head>
+<body>
+{% extends "base.html" %}
+
+{% block content %}
+    <p>An email has been sent to {{ masked_email }} for verification. Please enter the code to log in</p>
+    <form action="{{ url_for('auth.send_verification_code') }}" method="POST">
+        <button type="submit">Verify Email</button>
+    </form>
+{% endblock %}
+
+</body>
+</html>

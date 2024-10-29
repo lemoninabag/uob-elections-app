@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Your Vote</title>
+</head>
+<body>
+    {% extends "base.html" %}
+    {% block content %}
+    <h1>Confirm Your Vote</h1>
+
+    <ul>
+        {% for position, candidate in votes.items() %}
+            <li>{{ position }}: {{ candidate }}</li>
+        {% endfor %}
+    </ul>
+
+    <form method="POST">
+        <button type="submit">Submit Vote</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
