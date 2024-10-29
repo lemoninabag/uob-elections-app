@@ -293,7 +293,7 @@ def update_verification_status(username):
         reader = csv.DictReader(file)
         for row in reader:
             if row['username'] == username:
-                row['is_verified'] = 'True'  # Set is_verified to True
+                row['is_verified'] = 'True' 
             users.append(row)
 
     with open('voters.csv', 'w', newline = '') as file:
