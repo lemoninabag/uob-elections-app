@@ -24,6 +24,12 @@ Visit [this link](https://accounts.google.com/v3/signin/identifier?continue=http
 touch .env
 ```
 
-### 4. Access the app:
+### 4. Run the app:
+
+```
+python run.py
+```
+
+### 5. Access the app:
 - Go to `http://127.0.0.1:5000/` to access the app.
 
