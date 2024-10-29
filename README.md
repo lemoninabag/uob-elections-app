@@ -4,9 +4,9 @@ Beta Version of the voting app for UoB Student Council Elections 2024, made in F
 
 ## Directory/Data
 
-**student_data.csv** = Student Data with ID, Name & Course, shared by UoB< br / >
-**voters.csv** = Registered voters< br / >
-**nominees.csv** = Candidates running for election with their respective position & vote count< br / >
+**student_data.csv** = Student Data with ID, Name & Course, shared by UoB  
+**voters.csv** = Registered voters  
+**nominees.csv** = Candidates running for election with their respective position & vote count
 
 ## How to run
 
